@@ -28,4 +28,14 @@ public class App {
             System.out.println(h.getName() + " " + h.getData());
         }
     }
+
+    public static void isHoliday(String data){
+        for(Holiday h: holidays){
+            if(h.getData().equals(data)){
+                System.out.printf("A data %d é feriado.", data);
+                return;
+            }
+        }
+        System.out.printf("A data %d não é feriado.", data);
+    }
 }
